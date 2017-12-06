@@ -1,0 +1,15 @@
+#设置当前的配置文件
+spring:
+  profiles:
+    active: prod
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/test
+    username: root
+    password: root
+
+#    配置jpa 持久化工具
+  jpa:
+      hibernate:
+        ddl-auto: update # create:存在则删除重建；update: 若存在则更新已有表；validate：验证类的属性是否与表结构一致
+      show-sql: true
